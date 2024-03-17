@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <title>LaGazetteTulliste</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#"><img id="logo" src="images/logo.png"></a>
+        <ul class="navButtons">
+            <a href="#">
+                <li>Accueil</li>
+            </a>
+            <a href="game.html">
+                <li>Le jeu</li>
+            </a>
+            <a href="about.html">
+                <li>A Propos</li>
+            </a>
+        </ul>
+    </nav>
+    <header>
+        <div class="wave"></div>
+        <div class="title">
+            <h1>LaGazetteTulliste</h1>
+            <p class="subtitle">L'actualité, réinventée</p>
+            <a href="https://journal.elliotmoreau.fr" target="_blank">Visiter LaGazetteTulliste</a>
+        </div>
+        <div class="scroll">
+            <a class="arrowDown">
+                <img src="images/icons/arrow-down.png">
+            </a>
+        </div>
+    </header>
+    <main id="content">
+        <hr class="section-separator">
+        <!-- Features section -->
+        <section class="features-section">
+            <div class="features">
+                <div class="feature" onclick="feature('articles')">
+                    <img src="images/icons/news.png">
+                    <h2>Actualités</h2>
+                    <p>Retrouvez les dernières actualités de Tulle et de ses alentours.</p>
+                </div>
+                <div class="feature" onclick="feature('podcast')">
+                    <img src="images/icons/podcast.png">
+                    <h2>Podcasts</h2>
+                    <p>Écoutez les derniers podcasts de LaGazetteTulliste.</p>
+                </div>
+                <div class="feature" onclick="feature('sport')">
+                    <img src="images/icons/sport.png">
+                    <h2>Résultats Sportifs</h2>
+                    <p>Retrouvez les résultats sportifs de Tulle et de ses alentours.</p>
+                </div>
+                <div class="feature" onclick="feature('videos')">
+                    <img src="images/icons/videos.png">
+                    <h2>Vidéos</h2>
+                    <p>Regardez les dernières vidéos de LaGazetteTulliste.</p>
+                </div>
+                <div class="feature" onclick="feature('meteo')">
+                    <img src="images/icons/weather.png">
+                    <h2>Météo</h2>
+                    <p>Retrouvez les prévisions météorologiques en fonction de votre localisation.</p>
+                </div>
+                <div class="feature" onclick="feature('about')">
+                    <img src="images/icons/free.png">
+                    <h2>Gratuit et sans publicité</h2>
+                    <p>LaGazetteTulliste est un site gratuit et sans publicité.</p>
+                </div>
+            </div>
+        </section>
+        <hr class="section-separator">
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter">
+                <div class="title">
+                    <h2>Newsletter</h2>
+                    <img src="images/icons/newsletter.png">
+                </div>
+                <div class="newsletter-form">
+                    <img src="images/newsletter-illustration.png">
+                    <form action="newsletter.php" method="post">
+                        <h3>Recevez les dernières actualités.</h3>
+                        <p class="message"></p>
+                        <div class="input-group">
+                            <img src="images/icons/newsletter.png">
+                            <input placeholder="Votre adresse email" type="email" id="email" name="email" required>
+                        </div>
+                        <input type="submit" value="S'inscrire">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Site développé par <a target="_blank" href="https://elliotmoreau.fr">Elliot Moreau &copy;</a></p>
+    </footer>
+    <div class="bg"></div>
+</body>
+
+<script src="js/arrowDown.js"></script>
+<script src="js/scrollAnnimation.js"></script>
+<script src="js/feature.js"></script>
+<script src="js/newsletter.js"></script>
+
+</html>

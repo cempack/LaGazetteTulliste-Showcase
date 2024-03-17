@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LaGazetteTulliste - Le Jeu</title>
+    <link rel="stylesheet" href="styles/game.css">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+</head>
+
+<body>
+    <div id="startMenu">
+        <p id="credits">Développé par <a target="_blank" href="https://elliotmoreau.fr">Elliot Moreau</a></p>
+        <div id="gameControls">
+            <img id="startMenuLogo" src="images/game/logo.png">
+            <button id="playButton">Jouer <img class="imgButton" src="images/icons/play-btn.png"></button>
+            <button class="backButton">Retour <img class="imgButton" src="images/icons/back-btn.png"></button>
+        </div>
+        <div id="rules">
+            <div id="rulesTitle">
+                <h2>Règles du jeu</h2> <img id="rulesIcon" src="images/icons/rules.png">
+            </div>
+            <div class="rule">
+                <div class="ruleIllustration">
+                    <img src="images/icons/arrow-left.png">
+                    <img src="images/icons/arrow-right.png">
+                </div>
+                <p>Déplacez-vous avec les flèches de votre clavier et tirez avec la touche espace.</p>
+            </div>
+            <div class="rule">
+                <div class="ruleIllustration">
+                    <img src="images/icons/life.png" style="filter: invert(1);">
+                </div>
+                <p>Évitez les ennemis et tirez sur eux avant qu'ils ne touchent le sol pour ne pas perdre de vie.</p>
+            </div>
+            <div class="rule">
+                <div class="ruleIllustration">
+                    <img src="images/icons/gift.png">
+                </div>
+                <p>Tirez sur les cadeaux pour découvrir un fun fact.</p>
+            </div>
+            <div class="rule">
+                <div class="ruleIllustration">
+                    <img src="images/icons/win.png">
+                </div>
+                <p>Ramassez 5 cadeaux pour gagner.</p>
+            </div>
+        </div>
+    </div>
+    <div id="gameContainer" style="display: none;">
+        <div id="player"><img src="images/game/player.png"></div>
+        <div id="lifeBar">
+            <div id="life"><img src="images/icons/life.png"></div>
+        </div>
+    </div>
+    <div id="gameOverMenu" style="display: none;">
+        <img id="gameLogo" src="images/game/logo.png">
+        <p>Game Over!</p>
+        <button class="restartButton">Recommencer <img class="imgButton" src="images/icons/play-btn.png"></button>
+        <button class="backButton">Retour <img class="imgButton" src="images/icons/back-btn.png"></button>
+    </div>
+    <div id="victoryMenu" style="display: none;">
+        <img id="gameLogo" src="images/game/logo.png">
+        <p>Victoire!</p>
+        <button class="restartButton">Recommencer <img class="imgButton" src="images/icons/play-btn.png"></button>
+        <button class="backButton">Retour <img class="imgButton" src="images/icons/back-btn.png"></button>
+    </div>
+    <div id="easterEggPopup" class="popup">
+        <div class="popup-content">
+            <img id="easterEggImg">
+            <p id="easterEggMessage"></p>
+            <button id="closePopup">Ok</button>
+        </div>
+    </div>
+    <button id="pauseButton" style="display: none;"><img src="images/icons/pause.png"></button>
+    <button id="musicToggle" style="display: none;"><img src="images/icons/mute.png"></button>
+    <button id="escapeButton" style="display: none;"><img src="images/icons/close.png"></button>
+    <audio id="backgroundMusic" loop>
+        <source src="assets/music.mp3" type="audio/mp3">
+    </audio>
+    <div class="bg"></div>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
