@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scoreDisplay.textContent = "Score: 0";
     playerPosition = gameContainer.offsetWidth / 2;
     currentEggIndex = 0;
+    easterEggs = easterEggs.map((egg) => ({ ...egg, collected: false }));
     lastTwoSpawns = [false, false];
     manageEnemySpawning();
     window.requestAnimationFrame(gameLoop);
@@ -272,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gameContainer.removeChild(enemy.element);
         enemies.splice(index, 1);
         if (!enemy.eggId) {
-          loseLife(0.5);
+          loseLife(1);
         }
       } else {
         enemy.element.style.top = `${enemy.y}px`;
@@ -413,16 +414,16 @@ document.addEventListener("DOMContentLoaded", function () {
     lastRenderTime = currentTime;
 
     if (keysPressed["ArrowLeft"] && playerPosition > 0) {
-      playerPosition -= 8;
+      playerPosition -= 12;
       player.style.transform =
-        "rotate(-2.5deg) translateX(-50%) translateY(-50%)";
+        "rotate(-3deg) translateX(-50%) translateY(-50%)";
     }
     if (
       keysPressed["ArrowRight"] &&
       playerPosition < gameContainer.offsetWidth - player.offsetWidth
     ) {
-      playerPosition += 8;
-      player.style.transform = "rotate(2.5deg) translateX(-50%) translateY(-50%)";
+      playerPosition += 12;
+      player.style.transform = "rotate(3deg) translateX(-50%) translateY(-50%)";
     }
     if (!keysPressed["ArrowLeft"] && !keysPressed["ArrowRight"]) {
       player.style.transform = "rotate(0deg) translateX(-50%) translateY(-50%)";
